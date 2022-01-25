@@ -17,6 +17,15 @@ const RandomValuesJsiHelper = NativeModules.RandomValuesJsiHelper
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return RandomValuesJsiHelper.multiply(a, b);
+RandomValuesJsiHelper.install();
+
+// @ts-expect-error
+if (typeof global.crypto !== 'object') {
+  // @ts-ignore
+  global.crypto = {};
 }
+// @ts-expect-error
+global.crypto.getRandomValues = (array: ArrayBuffer) => {
+  // @ts-expect-error
+  return global.getRandomValues(array.byteLength);
+};

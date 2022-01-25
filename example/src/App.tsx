@@ -1,18 +1,23 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-random-values-jsi-helper';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import 'react-native-random-values-jsi-helper';
+import { useCallback, useMemo } from 'react';
+import { v4 as uuid } from 'uuid';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [_uuid, setUuid] = React.useState(undefined);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+  const generateUuid = useCallback(() => {
+    setUuid(uuid());
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <TouchableOpacity onPress={generateUuid}>
+        <Text>Generate UUID</Text>
+      </TouchableOpacity>
+      <Text>{_uuid}</Text>
     </View>
   );
 }

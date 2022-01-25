@@ -1,8 +1,11 @@
 #include <jni.h>
-#include "example.h"
+#include <jsi/jsi.h>
+#include <string>
+
+using namespace facebook;
 
 extern "C"
-JNIEXPORT jint JNICALL
-Java_com_reactnativerandomvaluesjsihelper_RandomValuesJsiHelperModule_nativeMultiply(JNIEnv *env, jclass type, jint a, jint b) {
-    return example::multiply(a, b);
+JNIEXPORT void JNICALL
+Java_com_reactnativerandomvaluesjsihelper_RandomValuesJsiHelperModule_nativeInstall(JNIEnv *env, jclass _, jlong jsiPtr, jobject instance) {
+    //return example::multiply(a, b);
 }
