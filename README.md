@@ -42,4 +42,4 @@ MIT
 
 ## Other projects
 
-(react-native-get-random-values)[https://github.com/LinusU/react-native-get-random-values]
+[react-native-get-random-values](https://github.com/LinusU/react-native-get-random-values)
