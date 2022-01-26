@@ -20,18 +20,16 @@ def nodeModules = findNodeModules(projectDir)
 logger.warn("BlobJsiHelper: node_modules/ found at: ${nodeModules}")
 
 buildscript {
-    if (project == rootProject) {
-        repositories {
-            google()
-            mavenCentral()
-            jcenter()
-        }
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
 
 
-        dependencies {
-            classpath 'com.android.tools.build:gradle:4.2.2'
-            classpath 'de.undercouch:gradle-download-task:4.1.2'
-        }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'de.undercouch:gradle-download-task:4.1.2'
     }
 }
 
