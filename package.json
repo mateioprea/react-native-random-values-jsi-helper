@@ -10,7 +10,10 @@
   "files": [
     "src",
     "lib",
-    "android",
+    "android/build.gradle",
+    "android/CMakeLists.txt",
+    "android/src",
+    "android/cpp-adapter.cpp",
     "ios",
     "cpp",
     "react-native-random-values-jsi-helper.podspec",
