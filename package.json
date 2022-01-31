@@ -1,6 +1,6 @@
 {
   "name": "react-native-random-values-jsi-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native crypto.getRandomValues JSI implementation",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
