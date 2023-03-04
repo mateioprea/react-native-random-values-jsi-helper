@@ -4,8 +4,16 @@ React Native polyfill for crypto.getRandomValues. Used in libraries like [uuid](
 
 ## Installation
 
+React Native 0.71.0 or higher:
 ```sh
 yarn add react-native-random-values-jsi-helper
+npx pod-install
+```
+
+React Native < 0.71:
+
+```sh
+yarn add react-native-random-values-jsi-helper@1.0.4
 npx pod-install
 ```
 
