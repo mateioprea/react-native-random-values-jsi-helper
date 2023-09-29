@@ -41,6 +41,7 @@ if (isNewArchitectureEnabled()) {
 apply plugin: 'com.android.library'
 
 android {
+  namespace = "com.reactnativerandomvaluesjsihelper"
   compileSdkVersion safeExtGet('compileSdkVersion', 30)
   ndkVersion '23.1.7779620'
 
